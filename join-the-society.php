@@ -14,6 +14,7 @@
  *
  */
 include 'global.css';
+include 'join-the-society.css';
 get_header();
 
 ?>

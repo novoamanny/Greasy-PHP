@@ -75,11 +75,15 @@ iframe .root {display: none;}
 	padding: 140px 0;
     width: 100%;
 }
+/* CARD */
 .card{
     width: 30%;
     background-color: #000;
     margin: 0 20px;
     border: #CFA240 3px solid;
+}
+.card .gold-title{
+    padding: 8px 0;
 }
 .card-details{
     padding: 20px 5px;
@@ -89,4 +93,24 @@ iframe .root {display: none;}
 }
 .card-details .border-bottom{
     border-bottom: #CFA240 5px solid;
+}
+.card-details .benefit{
+    padding: 30px 0
+}
+.card-details .gold-bar{
+    padding: 2px 0;
+    width: 70%;
+}
+
+
+
+/* J O I N   T H E   S O C I E T Y */
+.page-template-join-the-society .main-page-wrapper .container{
+    max-width: unset !important;
+}
+.page-template-join-the-society h2{
+    margin: 0
+}
+.page-template-join-the-society .header{
+    font-size: 7.5em;
 }
