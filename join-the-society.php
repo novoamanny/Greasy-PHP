@@ -13,16 +13,25 @@
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  */
+include 'global.css';
 get_header();
 
 ?>
 <!-- Join The Society Page -->
 <div id="JTS" class="JTS">
+    <!-- Hero -->
     <?php include 'components/global-section-hero.php' ?>
+
+    <?php include 'components/card-display.php' ?>
 
 </div>
 
 
+<style>
+
+</style>
 
 <?php
 get_footer();
+
+

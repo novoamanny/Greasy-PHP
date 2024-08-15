@@ -1,0 +1,1 @@
+These are files that are focused on the Greasy Hands Society "Join The Society" page.
