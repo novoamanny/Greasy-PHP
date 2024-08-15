@@ -11,3 +11,82 @@
 body {background-color: #000;}
 
 iframe .root {display: none;}
+
+
+/* G L O B A L   V A R I A B L E S */
+/* Background Colors */
+.bg-black{
+    background-color: #000;
+}
+.bg-gold{
+    background-color: #CFA240;
+}
+
+/* T E X T   C O L O R S */
+.text-color-gold{
+    color: #CFA240;
+}
+.text-color-black{
+    color: #000;
+}
+.text-color-white{
+    color: #fff
+}
+
+/* Flex */
+.flex{
+	display: flex;
+}
+.flex-left{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: left;
+}
+.flex-center{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.flex-right{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: right;
+}
+
+/* Align Vertically */
+.align-items{
+	align-items: center;
+}
+
+/* W I D T H */
+.full{
+    width: 100%;
+}
+
+/* HERO STYLES */
+.hero-section{
+    width: 100%;
+    min-height: 600px;
+    background-color: #000;
+}
+
+/* Card Display */
+.card-section{
+	padding: 140px 0;
+    width: 100%;
+}
+.card{
+    width: 30%;
+    background-color: #000;
+    margin: 0 20px;
+    border: #CFA240 3px solid;
+}
+.card-details{
+    padding: 20px 5px;
+}
+.card-details .title{
+
+}
+.card-details .border-bottom{
+    border-bottom: #CFA240 5px solid;
+}

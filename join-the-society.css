@@ -1,0 +1,9 @@
+.page-template-join-the-society .main-page-wrapper .container{
+    max-width: unset !important;
+}
+.page-template-join-the-society h2{
+    margin: 0
+}
+.page-template-join-the-society .header{
+    font-size: 7.5em;
+}

@@ -18,13 +18,10 @@ get_header();
 
 ?>
 <!-- Join The Society Page -->
-<div id="JTS" class="JTS">
-    <!-- Hero -->
-    <?php include 'components/global-section-hero.php' ?>
-
-    <?php include 'components/card-display.php' ?>
-
-</div>
+<!-- Hero -->
+<?php include 'components/global-section-hero.php' ?>
+<!-- Card Section (Grease, Grit, Glory) -->
+<?php include 'components/card-display.php' ?>
 
 
 <style>
