@@ -33,7 +33,20 @@ iframe .root {display: none;}
     color: #fff
 }
 
-/* Flex */
+/* B U T T O N   S T Y L E S */
+.btn{
+    padding: 10px 0;
+}
+.btn-white{
+    background: #fff;
+    color: #000;
+}
+.btn-clear{
+    background: none;
+    color: #000;
+}
+
+/* F L E X */
 .flex{
 	display: flex;
 }
@@ -53,7 +66,7 @@ iframe .root {display: none;}
 	justify-content: right;
 }
 
-/* Align Vertically */
+/* A L I G N   I T E M S   V E R T I C A L L Y */
 .align-items{
 	align-items: center;
 }
@@ -62,41 +75,46 @@ iframe .root {display: none;}
 .full{
     width: 100%;
 }
+.half{
+    width: 50%;
+}
 
-/* HERO STYLES */
+/* H E R O   S T Y L E S */
 .hero-section{
     width: 100%;
     min-height: 600px;
     background-color: #000;
 }
 
-/* Card Display */
+/* C A R D   D I S P L A Y   S E C T I O N */
 .card-section{
 	padding: 140px 0;
     width: 100%;
 }
-/* CARD */
+/* C A R D   S T Y L E S*/
 .card{
     width: 30%;
     background-color: #000;
     margin: 0 20px;
     border: #CFA240 3px solid;
 }
+/* Card Title */
 .card .gold-title{
     padding: 8px 0;
 }
+/* Card Details */
 .card-details{
     padding: 20px 5px;
 }
+/* Card Details Title */
 .card-details .title{
 
 }
-.card-details .border-bottom{
-    border-bottom: #CFA240 5px solid;
-}
+/* Card Benefit */
 .card-details .benefit{
     padding: 30px 0
 }
+/* Card Benefit Separator */
 .card-details .gold-bar{
     padding: 2px 0;
     width: 70%;
