@@ -70,6 +70,9 @@ iframe .root {display: none;}
 .align-items{
 	align-items: center;
 }
+.align-items-start{
+	align-items: start;
+}
 
 /* W I D T H */
 .full{
@@ -91,11 +94,18 @@ iframe .root {display: none;}
 	padding: 140px 0;
     width: 100%;
 }
+.card-section .main-headline-container{
+    width: 80%;
+}
+.card-section .main-headline-container .main-headline{
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
 /* C A R D   S T Y L E S*/
 .card{
-    width: 30%;
+    width: 25%;
     background-color: #000;
-    margin: 0 20px;
+    margin: 0 30px;
     border: #CFA240 3px solid;
 }
 /* Card Title */
@@ -107,18 +117,50 @@ iframe .root {display: none;}
     padding: 20px 5px;
 }
 /* Card Details Title */
-.card-details .title{
-
+.card-details .title h2{
+    font-size: 3em;
 }
 /* Card Benefit */
 .card-details .benefit{
-    padding: 30px 0
+    padding: 45px 0
 }
 /* Card Benefit Separator */
 .card-details .gold-bar{
     padding: 2px 0;
-    width: 70%;
+    width: 50%;
 }
+
+
+
+
+/* Accordion */
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+  
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+  
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+
+
 
 
 
@@ -129,6 +171,7 @@ iframe .root {display: none;}
 .page-template-join-the-society h2{
     margin: 0
 }
+/* Need to make global style for hero sections! */
 .page-template-join-the-society .header{
     font-size: 7.5em;
 }

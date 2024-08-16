@@ -15,6 +15,7 @@
  */
 include 'global.css';
 include 'join-the-society.css';
+
 get_header();
 
 ?>
@@ -23,7 +24,6 @@ get_header();
 <?php include 'components/global-section-hero.php' ?>
 <!-- Card Section (Grease, Grit, Glory) -->
 <?php include 'components/card-display.php' ?>
-
 
 <style>
 
