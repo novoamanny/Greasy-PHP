@@ -171,7 +171,7 @@ iframe .root {display: none;}
 /* Card Benefit Separator */
 .card-details .gold-bar{
     padding: 2px 0;
-    width: 50%;
+    width: 65%;
 }
 
 
@@ -223,14 +223,33 @@ iframe .root {display: none;}
 
 
 
-
+/* Work on Queries */
 
 /* M E D I A   Q U E R I E S */
 @media (max-width: 1000px){
+    /* G L O B A L   G R E A S Y   H A N D   L O G O */
+    .global-greasy-hand-logo{
+        width: 8%;
+        margin-right: 10px;
+    }
+    .card-section{
+        padding: 80px 0 120px 0;
+    }
+    .card-section .main-headline-container{
+        /* justify-content: center; */
+        margin-bottom: 40px;
+        width: 90%;
+    }
+    .card-section .main-headline-container .main-headline{
+        font-size: 3em;
+    }
     .desktop_cards{
         display: none;
     }
     .mobile_cards{
         display: inherit;
+    }
+    .mobile_cards .card-details .benefit .copy h2{
+        font-size: 1.4em;
     }
 }

@@ -42,6 +42,7 @@
 var cards = document.getElementsByClassName('card');
 var benefits = document.getElementsByClassName('card-details');
 var set = null;
+var firstClick;
 var pastNode;
 
 // Cards Array
@@ -49,10 +50,26 @@ var cardsArray = [...cards];
 // Benefits Array
 var benefitsArray = [...benefits];
 
-
+// INIT
+if(!set){
+    cardsArray.forEach((card, index) => {
+        console.log(index, card)
+        if (index !== 3){
+            benefitsArray[index].classList.remove('expanded');
+            pastNode = cardsArray[index];
+        }
+    })
+    set = true;
+}
 // Toggle Handle
 cardsArray.forEach((card, index) => {
     card.addEventListener("click", () => {
+        // Only Mobile
+        if(!firstClick){
+            benefitsArray[3].classList.remove('expanded');
+            firstClick = true;
+        }
+
         if (benefitsArray[index].classList.contains('expanded')) {
             
             pastNode = null;
@@ -66,17 +83,4 @@ cardsArray.forEach((card, index) => {
         }
     });
 })
-
-
-
-// Set First Card Active
-const init = () =>{
-    pastNode = benefitsArray[0];
-    set = true;
-    return;
-}
-
-if(!set){
-    init();
-}
 </script>

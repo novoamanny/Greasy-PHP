@@ -1,13 +1,14 @@
 <!-- Join The Society -->
 <!-- Card Component -->
 
+
 <div class="card flex-center align-items">
     <!-- Top Gold Bar -->
     <div class="flex-center align-items bg-gold full gold-title">
         <h2><?php echo $card_title; ?></h2>
     </div>
     <!-- Card Description -->
-    <div class="flex-center align-items bg-black full card-details <?php  echo $card_index;  ?>">
+    <div class="flex-center align-items bg-black full card-details expanded">
         <?php if ( have_rows( 'card_content' ) ) : ?>
             <?php while ( have_rows( 'card_content' ) ) : the_row(); 
                 $numrows = count( get_sub_field( 'benefits' ) );
