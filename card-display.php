@@ -16,6 +16,7 @@
             <?php while( have_rows('card') ): the_row(); ?>
             <?php
             // Data
+                $card_index = get_row_index();
                 $card_title=get_sub_field('card_title');
             ?>
                 <?php include 'card.php' ?>
@@ -34,3 +35,48 @@
         <?php endif; ?>
     </div>
 </div>
+
+<!-- Need to comeback and review -->
+<script>
+// Retrieve Data
+var cards = document.getElementsByClassName('card');
+var benefits = document.getElementsByClassName('card-details');
+var set = null;
+var pastNode;
+
+// Cards Array
+var cardsArray = [...cards];
+// Benefits Array
+var benefitsArray = [...benefits];
+
+
+// Toggle Handle
+cardsArray.forEach((card, index) => {
+    card.addEventListener("click", () => {
+        if (benefitsArray[index].classList.contains('expanded')) {
+            
+            pastNode = null;
+            benefitsArray[index].classList.remove('expanded')
+        } else {
+            if(pastNode){
+            pastNode.classList.remove('expanded');
+          }
+            benefitsArray[index].classList.add('expanded');
+            pastNode = benefitsArray[index];
+        }
+    });
+})
+
+
+
+// Set First Card Active
+const init = () =>{
+    pastNode = benefitsArray[0];
+    set = true;
+    return;
+}
+
+if(!set){
+    init();
+}
+</script>
