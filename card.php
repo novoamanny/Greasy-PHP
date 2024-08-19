@@ -3,7 +3,7 @@
 
 <div class="card flex-center align-items">
     <!-- Top Gold Bar -->
-    <div class="flex-center align-items bg-gold full gold-title">
+    <div class="accordion flex-center align-items bg-gold full gold-title">
         <h2><?php echo $card_title; ?></h2>
     </div>
     <!-- Card Description -->
@@ -44,3 +44,4 @@
         <?php endif; ?>
     </div>
 </div>
+
