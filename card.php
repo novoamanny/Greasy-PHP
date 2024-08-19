@@ -26,7 +26,14 @@
                      $index = get_row_index();
                 ?>
                     <div class="flex-center align-items full benefit">
-                        <h2 class="text-color-white"><?php the_sub_field( 'benefit' ); ?></h2>
+                        <div class="copy text-center">
+                            <h2 class="text-color-white"><?php the_sub_field( 'benefit' ); ?></h2>
+                        </div>
+                        <?php if ( get_field( 'global_info_icon' ) ) : ?>
+                            <div class="info-icon">
+                                <img src="<?php the_field( 'global_info_icon' ); ?>" />
+                            </div>
+                        <?php endif ?>
                     </div>
                     <?php if($index != $numrows) : ?>
                     <div class="gold-bar bg-gold"></div>

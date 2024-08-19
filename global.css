@@ -22,6 +22,11 @@ iframe .root {display: none;}
     background-color: #CFA240;
 }
 
+/* T E X T   P O S I T I O N */
+.text-center{
+    text-align: center;
+}
+
 /* T E X T   C O L O R S */
 .text-color-gold{
     color: #CFA240;
@@ -89,24 +94,41 @@ iframe .root {display: none;}
     background-color: #000;
 }
 
+/* G L O B A L   G R E A S Y   H A N D   L O G O */
+.global-greasy-hand-logo{
+    width: 5%;
+    margin-right: 20px;
+}
+
 /* C A R D   D I S P L A Y   S E C T I O N */
+.desktop_cards{
+
+}
+.mobile_cards{
+    display: none;
+}
+.mobile_cards .card{
+    width: 90%;
+    margin: 20px 0;
+}
 .card-section{
 	padding: 140px 0;
     width: 100%;
 }
 .card-section .main-headline-container{
     width: 80%;
+    margin-bottom: 80px;
 }
 .card-section .main-headline-container .main-headline{
-    font-size: 1.5em;
-    margin-bottom: 30px;
+    font-size: 4em;
+    /* margin-bottom: 30px; */
 }
 /* C A R D   S T Y L E S*/
 .card{
-    width: 25%;
+    width: 24%;
     background-color: #000;
     margin: 0 30px;
-    border: #CFA240 3px solid;
+    border: #CFA240 5px solid;
 }
 /* Card Title */
 .card .gold-title{
@@ -114,15 +136,37 @@ iframe .root {display: none;}
 }
 /* Card Details */
 .card-details{
-    padding: 20px 5px;
+    padding: 50px 5px 20px 5px;
+}
+/* Card Details Title Container */
+.card-details .title{
+    margin-bottom: 0;
 }
 /* Card Details Title */
 .card-details .title h2{
     font-size: 3em;
+    margin-bottom: 0;
 }
 /* Card Benefit */
 .card-details .benefit{
     padding: 45px 0
+}
+.card-details .benefit h2{
+    font-family: Josefin Sans;
+    /* font-size: 16px; */
+    font-weight: 300;
+    line-height: 24px;
+
+}
+.card-details .benefit .copy{
+    width: 80%;
+    margin-right: 20px
+}
+.card-details .benefit .info-icon{
+    width: 3%;
+}
+.card-details .benefit .info-icon img{
+    cursor: pointer;
 }
 /* Card Benefit Separator */
 .card-details .gold-bar{
@@ -136,14 +180,7 @@ iframe .root {display: none;}
 /* Accordion */
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
-    background-color: #eee;
-    color: #444;
     cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
     transition: 0.4s;
 }
   
@@ -154,10 +191,9 @@ iframe .root {display: none;}
   
 /* Style the accordion panel. Note: hidden by default */
 .panel {
-    padding: 0 18px;
-    background-color: white;
-    display: none;
+    /* display: none; */
     overflow: hidden;
+    max-height: 0;
 }
 
 
@@ -174,4 +210,21 @@ iframe .root {display: none;}
 /* Need to make global style for hero sections! */
 .page-template-join-the-society .header{
     font-size: 7.5em;
+}
+
+
+
+
+
+
+
+
+/* M E D I A   Q U E R I E S */
+@media (max-width: 1000px){
+    .desktop_cards{
+        display: none;
+    }
+    .mobile_cards{
+        display: inherit;
+    }
 }
