@@ -41,7 +41,9 @@
 // Retrieve Data
 var cards = document.getElementsByClassName('card');
 var benefits = document.getElementsByClassName('card-details');
+// Set Expanded style
 var set = null;
+// Click Check
 var firstClick;
 var pastNode;
 
@@ -53,7 +55,6 @@ var benefitsArray = [...benefits];
 // INIT
 if(!set){
     cardsArray.forEach((card, index) => {
-        console.log(index, card)
         if (index !== 3){
             benefitsArray[index].classList.remove('expanded');
             pastNode = cardsArray[index];

@@ -87,11 +87,25 @@ iframe .root {display: none;}
     width: 50%;
 }
 
+/* O P A C I T Y   S C R E E N */
+.opacity-screen{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    background-color: rgba(0,0,0,0.2);
+}
 /* H E R O   S T Y L E S */
 .hero-section{
     width: 100%;
-    min-height: 600px;
+    min-height: 550px;
     background-color: #000;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
 }
 
 /* G L O B A L   G R E A S Y   H A N D   L O G O */
@@ -146,6 +160,10 @@ iframe .root {display: none;}
 .card-details .title h2{
     font-size: 3em;
     margin-bottom: 0;
+}
+.card-details .subtitle h2{
+    font-weight: 300;
+    font-family: Josefin Sans;
 }
 /* Card Benefit */
 .card-details .benefit{
@@ -216,6 +234,8 @@ iframe .root {display: none;}
 /* Need to make global style for hero sections! */
 .page-template-join-the-society .header{
     font-size: 7.5em;
+    position: relative;
+    z-index: 5;
 }
 
 
@@ -226,8 +246,61 @@ iframe .root {display: none;}
 /* Work on Queries */
 
 /* M E D I A   Q U E R I E S */
+@media(max-width: 2200px){
+    .card{
+        width: 28%;
+        margin: 0 15px;
+    }
+}
+@media(max-width: 2000px){
+    .card-section .main-headline-container{
+        width: 85%;
+    }
+      /* Card Benefit */
+    .card-details .benefit{
+        padding: 38px 0
+    }
+    .card .card-details .benefit .copy h2{
+        font-size: 1.1em;
+    }
+    .card .card-details .subtitle h2{
+        font-size: 1.2em;
+    }
+    .card-details .gold-bar{
+        padding: 1px 0;
+    }
+}
+@media(max-width: 1800px){
+    .card-section{
+        padding: 70px 0 100px 0;
+    }
+    .card-section .main-headline-container{
+        margin-bottom: 60px;
+    }
+}
+@media(max-width: 1500px){
+    .card{
+        width: 30%;
+    }
+}
+@media(max-width: 1300px){
+    .desktop_cards{
+        display: none;
+    }
+    .mobile_cards{
+        display: inherit;
+    }
+    .card .card-details .benefit .copy h2{
+        font-size: 1.3em;
+    }
+    .card .card-details .subtitle h2{
+        font-size: 1.5em;
+    }
+    .card-details .benefit .info-icon{
+        width: 2%;
+    }
+}
 @media (max-width: 1000px){
-    /* G L O B A L   G R E A S Y   H A N D   L O G O */
     .global-greasy-hand-logo{
         width: 8%;
         margin-right: 10px;
@@ -243,13 +316,71 @@ iframe .root {display: none;}
     .card-section .main-headline-container .main-headline{
         font-size: 3em;
     }
-    .desktop_cards{
-        display: none;
-    }
-    .mobile_cards{
-        display: inherit;
-    }
-    .mobile_cards .card-details .benefit .copy h2{
+    .card .card-details .benefit .copy h2{
         font-size: 1.4em;
     }
 }
+
+@media(max-width: 800px){
+    .hero-section{
+        min-height: 500px;
+    }
+    /* Need to make global style for hero sections! */
+    .page-template-join-the-society .header{
+        font-size: 5em;
+    }
+    .card-section .main-headline-container .main-headline{
+        font-size: 2.7em;
+    }
+    .card .card-details .benefit .copy h2{
+        font-size: 1.2em;
+    }
+    .card .card-details .subtitle h2{
+        font-size: 1.4em;
+    }
+    /* Card Benefit */
+    .card-details .benefit{
+        padding: 38px 0
+    }
+    /* Card Benefit Separator */
+    .card-details .gold-bar{
+        padding: 1px 0;
+        width: 70%;
+    }
+}
+ @media(max-width: 750px){
+    .card-details .benefit .info-icon{
+        width: 3%;
+    }
+ }
+
+ @media(max-width: 600px){
+    .card-details .benefit .info-icon{
+        width: 3%;
+        margin-top: 10px;
+    }
+    .card .card-details.expanded{
+        padding: 50px 15px 20px 15px;
+        max-height: 1500px;
+    }
+    .card .card-details .benefit .copy{
+        width: 100%;
+        margin-right: 0;
+    }
+       /* Card Benefit */
+    .card-details .benefit{
+        padding: 25px 0
+    }
+    .card-section .main-headline-container{
+        margin-bottom: 30px;
+    }
+    .card-section .main-headline-container .main-headline{
+        font-size: 2.4em;
+    }
+ }
+
+ @media(max-width: 400px){
+    .mobile_cards .card{
+        width: 95%;
+    }
+ }

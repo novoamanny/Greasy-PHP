@@ -19,18 +19,20 @@ $GREASY_HAND_LOGO = get_field('greasy_hand_logo');
 $INFO_ICON = get_field('global_info_icon');
 $card_index = 0;
 
+$hero_settings = get_field('hero_settings');
+$hero_content_toggle = $hero_settings['content_toggle'];
+$hero_image = $hero_settings['image'];
+
 get_header();
 
 ?>
 <!-- Join The Society Page -->
 <!-- Hero -->
 <?php include 'components/global-section-hero.php' ?>
+<!-- <?php get_template_part('components/global', 'section', 'hero'); ?> -->
 <!-- Card Section (Grease, Grit, Glory) -->
-<?php include 'components/card-display.php' ?>
-
-<style>
-
-</style>
+<!-- <?php include 'components/card-display.php' ?> -->
+<?php get_template_part('components/card', 'display'); ?>
 
 <?php
 get_footer();
