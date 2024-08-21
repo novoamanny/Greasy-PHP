@@ -31,8 +31,12 @@
                             <h2 class="text-color-white"><?php the_sub_field( 'benefit' ); ?></h2>
                         </div>
                         <?php if ( get_field( 'global_info_icon' ) ) : ?>
-                            <div class="info-icon">
+                            <div class="info-icon flex-center pops">
                                 <img src="<?php the_field( 'global_info_icon' ); ?>" />
+                                <div class="pop-box full copy mark"><p>Capital city founded by Hernán Cortés while searching for gold in the region</p></div>
+                                <div class="full flex-center pop-container align-items">
+                                    <div class="pop"><span class="hero-subtitle bold uppercase">x</span></div>
+                                </div>
                             </div>
                         <?php endif ?>
                     </div>
@@ -45,3 +49,13 @@
         <?php endif; ?>
     </div>
 </div>
+
+
+
+<!-- 
+<div class="flex-center pins Veracruz-one">
+    <div class="pin-box full copy mark"><p>Capital city founded by Hernán Cortés while searching for gold in the region</p></div>
+    <div class="full flex-center pin-container align-items">
+        <div class="pin pin-bg-blue"><span class="blue hero-subtitle bold uppercase">x</span></div>
+    </div>
+</div> -->

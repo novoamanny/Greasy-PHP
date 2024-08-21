@@ -107,6 +107,15 @@ iframe .root {display: none;}
     background-repeat: no-repeat;
     position: relative;
 }
+.hero-section .video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    height: 100%;
+    aspect-ratio: 16 / 9;
+}
 
 /* G L O B A L   G R E A S Y   H A N D   L O G O */
 .global-greasy-hand-logo{
@@ -192,6 +201,56 @@ iframe .root {display: none;}
     width: 65%;
 }
 
+
+/* C A R D   P I N S */
+.pops{
+    max-width: 320px;
+}
+.pop{
+    /* width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #fff; */
+    display: none;
+    transition: all ease 1s;
+    cursor: pointer;
+}
+.pop:hover{
+    
+}
+.pop-box{
+    max-height: 0;
+    z-index: 2;
+    background: rgba(0,0,0, 0.75);
+    overflow: hidden;
+    color: #fff;
+    transition: all ease 1s;
+}
+.pops span{
+    opacity: 0;
+    transition: all ease .8s;
+ }
+ .pops.expanded{
+    border: 1px solid #fff;
+ }
+.pops.expanded .pop{
+    width: 50px;
+    height: 50px;
+    border-radius: none;
+    background: none;
+    border: none;
+    display: block;
+}
+.pops.expanded span{
+   opacity: 1;
+}
+.pops.expanded .pop-container{
+      background: rgba(0,0,0, 0.75);
+}
+.pops.expanded .pop-box{
+    max-height: 500px;
+    padding: 10px;
+}
 
 
 

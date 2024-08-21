@@ -22,6 +22,7 @@ $card_index = 0;
 $hero_settings = get_field('hero_settings');
 $hero_content_toggle = $hero_settings['content_toggle'];
 $hero_image = $hero_settings['image'];
+$hero_video = $hero_settings['video'];
 
 get_header();
 
