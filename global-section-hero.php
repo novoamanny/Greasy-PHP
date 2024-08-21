@@ -1,4 +1,4 @@
-<div class="hero-section flex-center align-items" <?php if($hero_content_toggle == 'Image') : ?> style="background-image: url(<?php echo $hero_image; ?>)" <?php endif; ?>>
+<div class="hero-section flex-center align-items" <?php if($hero_content_toggle == 'Image') : ?> style="background-image: url(<?php echo $hero_image; ?>)" <?php else : ?> style="aspect-ratio: 16 / 9;)" <?php endif; ?>>
     <div class="opacity-screen"></div>
     <?php if( $hero_content_toggle == 'Video') : ?>
         <iframe

@@ -114,7 +114,8 @@ iframe .root {display: none;}
     width: 100%;
     z-index: 2;
     height: 100%;
-    aspect-ratio: 16 / 9;
+    
+    /* --ratio-percent: 56.25%; */
 }
 
 /* G L O B A L   G R E A S Y   H A N D   L O G O */
@@ -156,6 +157,7 @@ iframe .root {display: none;}
 /* Card Title */
 .card .gold-title{
     padding: 8px 0;
+    cursor: pointer;
 }
 /* Card Details */
 .card-details{
