@@ -43,7 +43,7 @@ $oldcol = 1;
 $col    = 1;
 
 
-// BirthDay
+// B I R T H D A Y   I N F O R M A T I O N
 $user = wp_get_current_user();
 if(is_object($user))
     $birthday = esc_attr( get_the_author_meta( 'birthday', $user->ID ) );

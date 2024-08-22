@@ -9,11 +9,7 @@ function woodmart_child_enqueue_styles() {
 add_action( 'wp_enqueue_scripts', 'woodmart_child_enqueue_styles', 10010 );
 
 
-
-
-
-
-
+// A D D   C A R T   F I E L D S
 /*add_filter( 'woocommerce_product_single_add_to_cart_text', 'custom_single_loop_add_to_cart_button', 20, 2 ); 
 function custom_single_loop_add_to_cart_button( $button_text, $product ) {
     // HERE define your specific product IDs in this array
@@ -34,7 +30,7 @@ function custom_single_loop_add_to_cart_button( $button_text, $product ) {
 
 
 
-//* Add select field to the checkout page
+//* A D D   S E L E C T   F I E L D   T O   T H E   C H E C K O U T   P A G E
 add_action('woocommerce_after_checkout_billing_form', 'wps_add_select_checkout_field');
 function wps_add_select_checkout_field( $checkout ) {
 
