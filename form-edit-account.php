@@ -172,4 +172,8 @@ else
 	<?php do_action( 'woocommerce_edit_account_form_end' ); ?>
 </form>
 
+<fieldset>
+	<?php echo do_shortcode('[gravityform id="8" title="true"]'); ?>
+</fieldset>
+
 <?php do_action( 'woocommerce_after_edit_account_form' ); ?>

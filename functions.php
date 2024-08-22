@@ -112,9 +112,9 @@ function wps_select_checkout_field_display_admin_order_meta($order){
 add_filter ( 'woocommerce_account_menu_items', 'misha_log_history_link', 40 );
 function misha_log_history_link( $menu_links ){
 	
-// 	$menu_links = array_slice( $menu_links, 0, 6, true ) 
-// 	+ array( 'delete-my-account' => 'Remove My Account' )
-// 	+ array_slice( $menu_links, 6, NULL, true );
+	$menu_links = array_slice( $menu_links, 0, 6, true ) 
+	+ array( 'delete-my-account' => 'Remove My Account' )
+	+ array_slice( $menu_links, 6, NULL, true );
 	
 	$menu_links = array_slice( $menu_links, 0, 6, true )
 	+ array( 'apply-for-a-military-discount' => 'Military Discount' )
@@ -1108,6 +1108,8 @@ add_filter('woocommerce_account_menu_items','wt_removed_un_wanted_my_account_tab
 function wt_removed_un_wanted_my_account_tabs( $items ) {
    if( isset($items['wt-store-credit']) ) unset( $items['wt-store-credit'] );
    if( isset($items['edit-address']) ) unset( $items['edit-address'] );
+   if( isset($items['upgrade-account']) ) unset( $items['upgrade-account'] );
+   if( isset($items['wishlist']) ) unset( $items['wishlist'] );
 
    return $items;
 }
