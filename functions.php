@@ -103,20 +103,21 @@ function wps_select_checkout_field_display_admin_order_meta($order){
 
 
 
-
+// NEED REVIEW
 /* ADD DELETE MY ACCOUNT */
 add_filter ( 'woocommerce_account_menu_items', 'misha_log_history_link', 40 );
 function misha_log_history_link( $menu_links ){
 	
-	$menu_links = array_slice( $menu_links, 0, 6, true ) 
-	+ array( 'delete-my-account' => 'Remove My Account' )
-	+ array_slice( $menu_links, 6, NULL, true );
+	// $menu_links = array_slice( $menu_links, 0, 6, true ) 
+	// + array( 'delete-my-account' => 'Remove My Account' )
+	// + array_slice( $menu_links, 6, NULL, true );
 	
-	$menu_links = array_slice( $menu_links, 0, 6, true )
-	+ array( 'apply-for-a-military-discount' => 'Military Discount' )
-	+ array_slice( $menu_links, 6, NULL, true );
+	// $menu_links = array_slice( $menu_links, 0, 6, true )
+	// + array( 'apply-for-a-military-discount' => 'Military Discount' )
+	// + array_slice( $menu_links, 6, NULL, true );
 	
-	return $menu_links;
+	// return $menu_links;
+	return;
 
 }
 // register permalink endpoint
