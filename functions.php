@@ -3,7 +3,7 @@
  * Enqueue script and styles for child theme
  */
 function woodmart_child_enqueue_styles() {
-    wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/global.css', array( 'woodmart-style' ), woodmart_get_theme_info( 'Version' ) );
+    wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/styles/global.css', array( 'woodmart-style' ), woodmart_get_theme_info( 'Version' ) );
      wp_enqueue_style('woodmart-child-bootstrap-custom', get_stylesheet_directory_uri() . '/styles/global.css', array('woodmart-style'), '1.0.0', 'all');
 }
 add_action( 'wp_enqueue_scripts', 'woodmart_child_enqueue_styles', 10010 );

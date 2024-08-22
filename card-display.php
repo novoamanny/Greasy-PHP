@@ -90,21 +90,21 @@ cardsArray.forEach((card, index) => {
 // I N F O   P O P S   T O G G L E
 var infoPops = document.querySelectorAll('.pops');
 var infoPopsArray = [...infoPops];
-var pastNode = null;
+var pastPop = null;
 
 infoPopsArray.forEach((currentNode, index) => {
     currentNode.addEventListener("click", () => {
-        console.log('hello')
     if (currentNode.classList.contains('expanded')) {
-        pastNode = null;
+        pastPop = null;
         currentNode.classList.remove('expanded');
     }
     else{
-        if(pastNode){
-        pastNode.classList.remove('expanded');
+        if(pastPop){
+        pastPop.classList.remove('expanded');
         }
         currentNode.classList.add('expanded');
-        pastNode = currentNode;
+        pastPop = currentNode;
+        console.log(currentNode)
     }
     });
 })

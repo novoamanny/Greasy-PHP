@@ -11,8 +11,10 @@
             ></iframe>
         </div>
     <?php endif; ?>
-    <h2 class="header text-color-gold wild-river greasy-font">Join The Society</h2>
     <div class="full flex-center align-items">
-        <a href="#join" title="" class="btn btn-color-white btn-style-default btn-style-rectangle btn-size-extra-large wd-open-popup ">SIGN UP</a>
+        <h2 class="header text-color-gold wild-river greasy-font">Join The Society</h2>
+        <div class="full flex-center align-items">
+            <a href="#join" title="" class="btn btn-color-white btn-style-default btn-style-rectangle btn-size-extra-large wd-open-popup ">SIGN UP</a>
+        </div>
     </div>
 </div>

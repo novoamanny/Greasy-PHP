@@ -13,8 +13,6 @@
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  */
-include 'global.css';
-include 'join-the-society.css';
 $GREASY_HAND_LOGO = get_field('greasy_hand_logo');
 $INFO_ICON = get_field('global_info_icon');
 $card_index = 0;
