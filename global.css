@@ -183,7 +183,8 @@ iframe .root {display: none;}
 }
 /* Card Benefit */
 .card-details .benefit{
-    padding: 45px 0
+    padding: 45px 0;
+    position: relative;
 }
 .card-details .benefit h2{
     font-family: Josefin Sans;
@@ -237,7 +238,8 @@ iframe .root {display: none;}
     opacity: 0;
     transition: all ease .8s;
  }
- .pops.expanded{
+ .card-details .benefit .info-icon.pops.expanded{
+    position: absolute;
     border: 1px solid #fff;
     width: 50px;
  }
