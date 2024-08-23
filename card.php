@@ -49,13 +49,3 @@
         <?php endif; ?>
     </div>
 </div>
-
-
-
-<!-- 
-<div class="flex-center pins Veracruz-one">
-    <div class="pin-box full copy mark"><p>Capital city founded by Hernán Cortés while searching for gold in the region</p></div>
-    <div class="full flex-center pin-container align-items">
-        <div class="pin pin-bg-blue"><span class="blue hero-subtitle bold uppercase">x</span></div>
-    </div>
-</div> -->

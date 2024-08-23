@@ -240,9 +240,18 @@ iframe .root {display: none;}
  }
  .card-details .benefit .info-icon.pops.expanded{
     position: absolute;
-    border: 1px solid #fff;
-    width: 50px;
+    width: 150px;
+    top: 0;
+    right: 0;
+    margin-bottom: 100px;
+    background-color: #ccc;
  }
+ .card-details .benefit .info-icon.pops p{
+    display: none;
+ }
+ .card-details .benefit .info-icon.pops.expanded img{
+    display: none;
+}
 .pops.expanded .pop{
     width: 50px;
     height: 50px;
@@ -255,12 +264,12 @@ iframe .root {display: none;}
    opacity: 1;
 }
 .pops.expanded .pop-container{
-      background: rgba(0,0,0, 0.75);
 }
 .pops.expanded .pop-box{
     height: 500px;
     padding: 10px;
     width: 100px;
+    
 }
 
 /* Accordion */
