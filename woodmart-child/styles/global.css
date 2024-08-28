@@ -1,0 +1,641 @@
+/*
+ Theme Name:   Woodmart Child
+ Description:  Woodmart Child Theme
+ Author:       XTemos
+ Author URI:   http://xtemos.com
+ Template:     woodmart
+ Version:      1.0.0
+ Text Domain:  woodmart
+*/
+
+body {background-color: #000;}
+
+iframe .root {display: none;}
+/* Modal Position */
+.modal-dialog{
+    top: 25%;
+}
+/* G L O B A L   V A R I A B L E S */
+/* Background Colors */
+.bg-black{
+    background-color: #000;
+}
+.bg-gold{
+    background-color: #CFA240;
+}
+
+/* T E X T   P O S I T I O N */
+.text-center{
+    text-align: center;
+}
+
+/* T E X T   C O L O R S */
+.text-color-gold{
+    color: #CFA240;
+}
+.text-color-black{
+    color: #000;
+}
+.text-color-white{
+    color: #fff
+}
+
+/* B U T T O N   S T Y L E S */
+.btn{
+    padding: 5px 40px;
+}
+.btn-white{
+    background: #fff;
+    color: #000;
+}
+.btn-clear{
+    background: none;
+    color: #000;
+}
+
+/* F L E X */
+.flex{
+	display: flex;
+}
+.flex-left{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: left;
+}
+.flex-center{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.flex-right{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: right;
+}
+.flex-start{
+    display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+/* A L I G N   I T E M S   V E R T I C A L L Y */
+.align-items{
+	align-items: center;
+}
+.align-items-start{
+	align-items: start;
+}
+
+/* W I D T H */
+.full{
+    width: 100%;
+}
+.half{
+    width: 50%;
+}
+
+/* O P A C I T Y   S C R E E N */
+.opacity-screen{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-color: rgba(0,0,0,0.2);
+}
+/* H E R O   S T Y L E S */
+.hero-section{
+    width: 100%;
+    min-height: 550px;
+    max-height: 750px;
+    background-color: #000;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.hero-section .video-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    height: 100%;
+    --ratio-percent: 56.25%;
+}
+.hero-section .video-container .video{
+    
+    width: 100%;
+    height: 100%;
+}
+.hero-section .btn{
+    position: relative;
+    z-index: 5;
+}
+/* G L O B A L   G R E A S Y   H A N D   L O G O */
+.global-greasy-hand-logo{
+    width: 5%;
+    margin-right: 20px;
+}
+
+/* C A R D   D I S P L A Y   S E C T I O N */
+.desktop_cards{
+
+}
+.mobile_cards{
+    display: none;
+}
+.mobile_cards .card{
+    width: 90%;
+    margin: 20px 0;
+}
+.card-section{
+	padding: 140px 0;
+    width: 100%;
+}
+.card-section .main-headline-container{
+    width: 80%;
+    margin-bottom: 80px;
+}
+.card-section .main-headline-container .main-headline{
+    font-size: 4em;
+    /* margin-bottom: 30px; */
+}
+/* C A R D   S T Y L E S*/
+.card{
+    width: 24%;
+    background-color: #000;
+    margin: 0 30px;
+    border: #CFA240 5px solid;
+}
+/* Card Title */
+.card .gold-title{
+    padding: 8px 0;
+    cursor: pointer;
+}
+/* Card Details */
+.card-details{
+    padding: 50px 5px 20px 5px;
+}
+/* Card Details Title Container */
+.card-details .title{
+    margin-bottom: 0;
+}
+/* Card Details Title */
+.card-details .title h2{
+    font-size: 3em;
+    margin-bottom: 0;
+}
+.card-details .subtitle h2{
+    font-weight: 300;
+    font-family: Josefin Sans;
+}
+/* Card Benefit */
+.card-details .benefit{
+    padding: 45px 0;
+    position: relative;
+}
+.card-details .benefit h2{
+    font-family: Josefin Sans;
+    /* font-size: 16px; */
+    font-weight: 300;
+    line-height: 24px;
+
+}
+.card-details .benefit .copy{
+    width: 80%;
+    margin-right: 20px
+}
+.card-details .benefit .info-icon{
+    width: 3%;
+}
+.card-details .benefit .info-icon img{
+    cursor: pointer;
+}
+/* Card Benefit Separator */
+.card-details .gold-bar{
+    padding: 2px 0;
+    width: 65%;
+}
+
+
+/* C A R D   P I N S */
+.pops{
+    max-width: 320px;
+    
+    overflow: hidden;
+}
+.pop{
+    /* width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #fff; */
+    display: none;
+    cursor: pointer;
+}
+ .card-details .benefit .info-icon.pops.expanded{
+    position: absolute;
+    width: 250px;
+    top: -20px;
+    right: 0px;
+    color: #ccc;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #5d5d5d;
+    transition: all ease 1s;
+    border-radius: 10px;
+    padding: 7px 0;
+    
+ }
+ .card-details .benefit .info-icon.pops p{
+    height: 0;
+    margin: 0;
+ }
+ .card-details .benefit .info-icon.pops.expanded p{
+     text-align: center;
+     height: unset;
+ }
+ .card-details .benefit .info-icon.pops.expanded img{
+     display: none;
+ }
+ .pops .pop{
+     cursor: pointer;
+ }
+.pops.expanded .pop{
+    display: block;
+    font-size: 18px;
+    text-align: center;
+    transition: all ease 0.3s;
+}
+.pops.expanded .pop:hover{
+    font-size: 25px;
+}
+.pops.expanded span{
+   opacity: 1;
+}
+.pops.expanded .pop-container{
+    
+}
+
+
+
+
+/* Accordion */
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    cursor: pointer;
+    transition: 0.4s;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+  
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+  
+/* Style the accordion panel. Note: hidden by default */
+.mobile_cards .card-details{
+    /* display: none; */
+    overflow: hidden;
+    max-height: 0;
+    transition: all 0.2s ease;
+    padding: 0;
+}
+.mobile_cards .card-details.expanded{
+    max-height: 1000px;
+    padding: 50px 5px 20px 5px;
+}
+
+
+
+
+
+/* J O I N   T H E   S O C I E T Y */
+.page-template-join-the-society .main-page-wrapper .container,
+.page-template-welcome-to-the-society .main-page-wrapper .container{
+    max-width: unset !important;
+}
+.page-template-join-the-society h2, .page-template-welcome-to-the-society h2{
+    margin: 0
+}
+/* Need to make global style for hero sections! */
+.page-template-join-the-society .header,
+.page-template-welcome-to-the-society .header{
+    font-size: 7.5em;
+    position: relative;
+    z-index: 5;
+}
+
+
+/* W E L C O M E   T O   T H E  S O C I E T Y */
+.welcome-banner{
+    width: 80%;
+    border: 3.5px solid #CFA240;
+}
+.welcome-banner .account{
+    background-color: #CFA240;
+    width: 30%;
+    padding: 20px 30px;
+}
+.welcome-banner .level{
+    width: 70%;
+}
+.exclusive-content{
+    margin: 150px 0 0 0;
+    padding: 0 100px;
+}
+
+/* C O U P O N */
+.coupon{
+    background-color: #000;
+    padding: 10px;
+    width: 50%;
+}
+.coupon .inner{
+    border: dashed 2px #fff;
+    padding: 30px 0;
+}
+
+/*G R E A S E   W E L C O M E*/
+.grease-welcome{
+    position: relative;
+    background-color: #000;
+    /*background-image: url('https://greasyhandsstg.wpenginepowered.com/wp-content/uploads/2024/08/greasyhandwhite.png');*/
+    /*background-size: 50%;*/
+    /*background-position: right;*/
+    /*background-repeat: no-repeat;*/
+    padding: 40px 30px;
+}
+.grease-welcome .titles{
+    font-size: 3.5em;
+}
+.grease-welcome .section{
+    width: 25%;
+    text-align: center;
+    padding: 25px 0;
+}
+.grease-welcome .section.border{
+    border: none !important;
+    border-right: solid 2px #CFA240 !important;
+}
+
+/* My Account */
+.woocommerce-MyAccount-navigation ul li.is-active>a {
+    background-color: #CFA240;
+    cursor: default;
+    position: relative;
+}
+.woocommerce-MyAccount-navigation ul li.is-active>a:before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 40px;
+  height: 40px;
+  transform: rotate(45deg);
+  background-color: rgb(244, 244, 244);
+}
+.woocommerce-MyAccount-navigation ul li.is-active>a:after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 40px;
+  height: 40px;
+  transform: rotate(45deg);
+  background-color: rgb(244, 244, 244);
+}
+
+/* My Account Benefits Section */
+.benefits-section{
+    padding: 10px 5px;
+}
+.benefits-section .square{
+    min-height: 220px;
+    width: 30%;
+    margin: 10px;
+    padding: 70px 20px;
+    border: solid 3px rgba(0,0,0,0.3);
+    box-shadow: 3px 3px rgba(0,0,0,0.2);
+}
+
+/* M E D I A   Q U E R I E S */
+@media(max-width: 2200px){
+    .card{
+        width: 28%;
+        margin: 0 15px;
+    }
+}
+@media(max-width: 2000px){
+    .card-section .main-headline-container{
+        width: 85%;
+    }
+      /* Card Benefit */
+    .card-details .benefit{
+        padding: 38px 0
+    }
+    .card .card-details .benefit .copy h2{
+        font-size: 1.1em;
+    }
+    .card .card-details .subtitle h2{
+        font-size: 1.2em;
+    }
+    .card-details .gold-bar{
+        padding: 1px 0;
+    }
+}
+@media(max-width: 1800px){
+    .card-section{
+        padding: 70px 0 100px 0;
+    }
+    .card-section .main-headline-container{
+        margin-bottom: 60px;
+    }
+    .grease-welcome .section{
+        width: 30%;
+        padding: 20px 20px;
+    }
+    .welcome-banner{
+        width: 90%;
+    }
+}
+@media(max-width: 1500px){
+    .welcome-banner{
+        width: 95%;
+    }
+    .card{
+        width: 30%;
+    }
+      .grease-welcome .section{
+        width: 33%;
+        padding: 20px 10px;
+    }
+    .coupon{
+        width: 100% !important;
+    }
+    .page-template-join-the-society .header,
+    .page-template-welcome-to-the-society .header{
+        font-size: 6.5em;
+        text-align: center;
+    }
+}
+@media(max-width: 1400px){
+    .benefits-section .square{
+        width: 47%;
+    }
+}
+@media(max-width: 1300px){
+    .desktop_cards{
+        display: none;
+    }
+    .mobile_cards{
+        display: inherit;
+    }
+    .card .card-details .benefit .copy h2{
+        font-size: 1.3em;
+    }
+    .card .card-details .subtitle h2{
+        font-size: 1.5em;
+    }
+    .card-details .benefit .info-icon{
+        width: 2%;
+    }
+    .coupon{
+        width: 50% !important;
+    }
+    .welcome-banner{
+        border: none;
+        width: 85%;
+    }
+    .page-template-join-the-society .header,
+    .page-template-welcome-to-the-society .header{
+        font-size: 5.5em;
+    }
+}
+@media(max-width: 1050px){
+      .benefits-section .square{
+        width: 90%;
+    }
+}
+@media (max-width: 1000px){
+    .global-greasy-hand-logo{
+        width: 8%;
+        margin-right: 10px;
+    }
+    .welcome-banner{
+        width: 90%;
+    }
+    .card-section{
+        padding: 80px 0 120px 0;
+    }
+    .card-section .main-headline-container{
+        /* justify-content: center; */
+        margin-bottom: 40px;
+        width: 90%;
+    }
+    .card-section .main-headline-container .main-headline{
+        font-size: 3em;
+    }
+    .card .card-details .benefit .copy h2{
+        font-size: 1.4em;
+    }
+    .page-template-join-the-society .header,
+    .page-template-welcome-to-the-society .header{
+        font-size: 4.5em;
+    }
+}
+
+@media(max-width: 800px){
+    .hero-section{
+        min-height: 500px;
+    }
+    /* Need to make global style for hero sections! */
+    .page-template-join-the-society .header{
+        font-size: 5em;
+    }
+    .card-section .main-headline-container .main-headline{
+        font-size: 2.7em;
+    }
+    .card .card-details .benefit .copy h2{
+        font-size: 1.2em;
+    }
+    .card .card-details .subtitle h2{
+        font-size: 1.4em;
+    }
+    /* Card Benefit */
+    .card-details .benefit{
+        padding: 38px 0
+    }
+    /* Card Benefit Separator */
+    .card-details .gold-bar{
+        padding: 1px 0;
+        width: 70%;
+    }
+}
+@media(max-width: 767px){
+      .benefits-section .square{
+        width: 100%;
+    }
+}
+ @media(max-width: 750px){
+    .card-details .benefit .info-icon{
+        width: 3%;
+    }
+    .coupon{
+        width: 90% !important;
+    }
+ }
+
+ @media(max-width: 600px){
+    .card-details .benefit .info-icon{
+        width: 3%;
+        margin-top: 10px;
+    }
+    .card .card-details.expanded{
+        padding: 50px 15px 20px 15px;
+        max-height: 1500px;
+    }
+    .card .card-details .benefit .copy{
+        width: 100%;
+        margin-right: 0;
+    }
+       /* Card Benefit */
+    .card-details .benefit{
+        padding: 25px 0
+    }
+    .card-section .main-headline-container{
+        margin-bottom: 30px;
+    }
+    .card-section .main-headline-container .main-headline{
+        font-size: 2.4em;
+    }
+    .page-template-join-the-society .header,
+    .page-template-welcome-to-the-society .header{
+        font-size: 3.5em;
+    }
+    .coupon{
+        width: 100% !important;
+    }
+    .welcome-banner{
+        width: 90%;
+    }
+ }
+ @media(max-width: 500px){
+     .welcome-banner{
+         width: 97%;
+     }
+ }
+
+ @media(max-width: 400px){
+    .page-template-join-the-society .header,
+    .page-template-welcome-to-the-society .header{
+        font-size: 3em;
+    }
+    .mobile_cards .card{
+        width: 95%;
+    }
+ }
