@@ -11,6 +11,15 @@
 body {background-color: #000;}
 
 iframe .root {display: none;}
+/* NAV FIX */
+.page-template-welcome-to-the-society  .whb-header{
+    margin-bottom: 0 !important;
+}
+@media (min-width: 1025px) {
+    .page-template-welcome-to-the-society .whb-header {
+        margin-bottom: 0 !important;
+    }
+}
 /* Modal Position */
 .modal-dialog{
     top: 25%;
@@ -345,14 +354,17 @@ iframe .root {display: none;}
     width: 70%;
 }
 .exclusive-content{
-    margin: 150px 0 0 0;
+    margin: 0;
     padding: 0 100px;
+}
+.wts{
+    margin-top: 80px;
 }
 
 /* C O U P O N */
 .coupon{
     background-color: #000;
-    padding: 10px;
+    padding: 5px;
     width: 50%;
 }
 .coupon .inner{
@@ -421,6 +433,20 @@ iframe .root {display: none;}
     padding: 70px 20px;
     border: solid 3px rgba(0,0,0,0.3);
     box-shadow: 3px 3px rgba(0,0,0,0.2);
+    border-radius: 15px;
+    position: relative;
+}
+.benefits-section .square p{
+    position: absolute;
+    top: 15%;
+    text-decoration: underline;
+    font-size: 24px;
+}
+.benefits-section .square.grit{
+    border: solid 3px #CFA240;
+}
+.benefits-section .square.glory{
+    border: solid 3px #000;
 }
 
 /* M E D I A   Q U E R I E S */

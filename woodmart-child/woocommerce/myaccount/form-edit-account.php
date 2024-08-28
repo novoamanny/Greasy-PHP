@@ -48,8 +48,7 @@ $user = wp_get_current_user();
 if(is_object($user))
     $birthday = esc_attr( get_the_author_meta( 'birthday', $user->ID ) );
 else
-    $birthday = null;
-
+    $birthday = null;  
 ?>
 
 <?php do_action( 'woocommerce_before_edit_account_form' ); ?>

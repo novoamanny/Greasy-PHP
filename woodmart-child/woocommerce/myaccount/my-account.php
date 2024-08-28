@@ -38,24 +38,34 @@ do_action('woocommerce_account_navigation'); ?>
 		$grit_diff = $grit - $member_total_spend;
 		$glory_diff = $glory - $member_total_spend;
 
-		if (current_user_can('society_member_grease')): ?>
-	        <div class="grease-welcome">
-	            <div class="opacity-screen"></div>
-            <p class="welcome">Welcome to the Society, <?php echo $current_user->first_name; ?></p>
-				<h2 class="titles"><span><u>Grease</u> |</span> Grit <span>|</span> Glory</h2>
-				<p class="spend-x">Spend <strong><?php echo '$' . $grit_diff; ?></strong> to reach GRIT</p>
-	        </div>
-		<?php elseif (current_user_can('society_member_grit')): ?>
-            <div class="grit-welcome">
-	        <p class="welcome">Welcome to the Society, <?php echo $current_user->first_name; ?></p>
-				<h2 class="titles">Grease <span>| <u>Grit</u> |</span> Glory</h2>
-				<p class="spend-x">Spend <strong><?php echo '$' . $glory_diff; ?></strong> to reach GLORY</p>
-			</div>
-		<?php elseif (current_user_can('society_member_glory')): ?>
-	        <div class="glory-welcome">
-	        <p class="welcome">Welcome to the Society, <?php echo $current_user->first_name; ?></p>
-				<h2 class="titles">Grease <span>|</span> Grit <span>| <u>Glory</u></span></h2>
-				<p class="spend-x"><strong>You've done it. You are the best of the best.</strong></p>
+		if (current_user_can('society_member_grease') || current_user_can('society_member_grit') || current_user_can('society_member_glory')): ?>
+	        <div class="grease-welcome flex-center">
+	            <!--<div class="opacity-screen"></div>-->
+	            <div class="left">
+                <p class="welcome">Welcome to the Society, <?php echo $current_user->first_name; ?></p>
+    				<h2 class="titles">
+    				    <?php if(current_user_can('society_member_grease')) : ?>
+    				    <span class="text-color-gold" style="color: #CFA240"><u>Grease</u></span> <span>|</span> Grit <span>|</span> Glory
+    				    <?php elseif(current_user_can('society_member_grit')) : ?>
+                        Grease <span>|</span> <span class="text-color-gold" style="color: #CFA240"><u>Grit</u></span> <span>|</span> Glory
+    				    <?php else : ?>
+    			    	Grease <span>|</span> Grit <span>|</span> <span class="text-color-gold" style="color: #CFA240"><u>Glory</u></span>
+    				    <?php endif; ?>
+    				</h2>
+    				<p class="spend-x"><?php if(!current_user_can('society_member_glory')) : ?> Spend <strong><?php if(current_user_can('society_member_grease')) : echo '$' . $grit_diff; elseif(current_user_can('society_member_grit')) : echo '$' . $glory_diff; endif; ?></strong> to reach <?php if(current_user_can('society_member_grease')) : ?>GRIT<?php else : ?>GLORY<?php endif; ?><?php else : ?><strong>You have made it. You are the best!</strong><?php endif; ?></p>
+    			</div>
+    			<div class="right flex-center">
+    			    <p class="welcome">Your Memeber Benefits</p>
+    			    <div class="full">
+    			        <?php if(have_rows('my_account_benefits', 'option')) : ?>
+    			            <?php while (have_rows('my_account_benefits', 'option')) : the_row(); $item = get_sub_field('benefit'); ?>
+    			                <?php if(get_row_index() < 4) : ?>
+                                    <p class="spend-x full welcome"><?php echo $item; ?></p>
+                                <?php endif; ?>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+    			    </div>
+    			</div>
 	        </div>
 		<?php endif;
 		
@@ -74,13 +84,29 @@ do_action('woocommerce_account_navigation'); ?>
     .grease-welcome{
         position: relative;
         background-color: #000;
-        background-image: url('https://greasyhandsstg.wpenginepowered.com/wp-content/uploads/2024/08/greasyhandwhite.png');
-        background-size: 50%;
-        background-position: right;
+        background-image: url('https://greasyhandsstg.wpenginepowered.com/wp-content/uploads/2024/08/Society-Banner.png');
+        background-size: cover;
+        background-position: center;
         background-repeat: no-repeat;
+        padding: 30px 20px;
     }
     .gform_button{
         background-color: #e51b1b !important;
+    }
+    .grease-welcome .left{
+        width: 60%;
+        border-right: 1px solid #fff;
+    }
+    .grease-welcome .right{
+        width: 40%;
+        border-left: 1px solid #fff;
+        padding: 0 20px;
+    }
+    .grease-welcome .right p{
+        margin-bottom: 0;
+    }
+    .wd-my-account-links div:hover{
+        border-radius: 12px;
     }
 </style>
 

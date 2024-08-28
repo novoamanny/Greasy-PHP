@@ -53,7 +53,11 @@ if (current_user_can('society_member_grease') || current_user_can('society_membe
             <?php endwhile; ?>
         <?php endif; ?>
     </div>
-    
+    <div class="flex-center full" style="margin-top: 20px;">
+        <button type="button" class="btn btn-primary btn-color-white btn-style-default btn-style-rectangle btn-size-extra-large wd-open-popup" data-bs-toggle="modal" data-bs-target="#gravityform" style="padding: 5px 40px; border: solid #000 2px;">
+          Sign Up
+        </button>
+    </div>
     <!--Welcome To The Society-->
     <?php else : ?>
         <div class="full flex-center align-items-start">
@@ -74,22 +78,34 @@ if (current_user_can('society_member_grease') || current_user_can('society_membe
                     </div>
                 </div>
                 <div class="level grease-welcome flex-center align-items">
-    	            <!--<div class="opacity-screen"></div>-->
     	            <div class='full flex-left'>
     	                <h2 class="titles text-color-gold greasy-font"><?php if(current_user_can('society_member_grease')) : ?>Grease<?php elseif(current_user_can('society_member_grit')) : ?>Grit<?php else : ?>Glory<?php endif; ?> Level</h2>
     	            </div>
     	            <?php if ( have_rows( 'welcome_banner' ) ) : ?>
-	                    <?php while ( have_rows( 'welcome_banner' ) ) : the_row(); ?>
+	                    <?php while ( have_rows( 'welcome_banner' ) ) : the_row(); 
+	                        
+	                    ?>
         	            <div class="full flex-center">
             				<p class="spend-x text-color-white" style="color: #fff;"><?php the_sub_field( 'banner_description' ); ?></p>
         				</div>
         				<div class='full flex-center'>
-        				    <?php if ( have_rows( 'benefits' ) ) : 
-        				    ?>
-			                    <?php while ( have_rows( 'benefits' ) ) : the_row(); ?>
-                				    <div class='section border'>
-                				        <h2 class="text-color-white"><?php the_sub_field( 'benefit' ); ?></h2>
-                				    </div>
+        				    <?php if ( have_rows( 'benefits' ) ) : ?>
+			                    <?php while ( have_rows( 'benefits' ) ) : the_row(); 
+			                        $repeaterTarget; // Targets the corresponding repeater by Member Society Role. More cases can be added for new roles.
+			                        if(current_user_can('society_member_grease')) : $repeaterTarget = 'grease_benefits'; endif;
+			                        if(current_user_can('society_member_grit')) : $repeaterTarget = 'grit_benefits'; endif;
+			                        if(current_user_can('society_member_glory')) : $repeaterTarget = 'glory_benefits'; endif;
+			                        $numrows = count( get_sub_field( $repeaterTarget ) ); // Number of rows for corresponding repeater. Used for Styling purposes...
+			                    ?>
+			                        <?php if ( have_rows( $repeaterTarget ) ) : ?>
+			                            <?php while ( have_rows( $repeaterTarget ) ) : the_row(); 
+			                            ?>
+			                                <!-- Will set 'border-right' property for all rows EXCEPT the last index. -->
+                        				    <div class='section <?php if($numrows != get_row_index()) : echo 'border'; endif; ?>'>
+                        				        <h2 class="text-color-white"><?php the_sub_field( 'benefit' ); ?></h2>
+                        				    </div>
+                				        <?php endwhile; ?>
+        				            <?php endif; ?>
         				        <?php endwhile; ?>
         				    <?php endif; ?>
         				</div>
@@ -121,8 +137,16 @@ if (current_user_can('society_member_grease') || current_user_can('society_membe
     	            </div>
     	        </div>
             </div>
+            <div class="main-headline-container wts flex-left align-items">
+                <h2 class="main-headline">Your unlocked products</h2>
+            </div>
             <div class="full flex-center align-items exclusive-content">
                 <?php echo do_shortcode('[products limit=”8” columns="4" orderby="popularity"]'); ?>
+            </div>
+            <div class="flex-center full" style="margin-top: 20px;">
+                <a type="button" class="btn btn-primary btn-color-white btn-style-default btn-style-rectangle btn-size-extra-large wd-open-popup" style="padding: 5px 40px; border: solid #000 2px; width: 65%; margin-top: 20px">
+                  Shop Exclusive Products
+                </a>
             </div>
         </div>
     <?php endif; ?>

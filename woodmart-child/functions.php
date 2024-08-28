@@ -10,10 +10,6 @@ add_action( 'wp_enqueue_scripts', 'woodmart_child_enqueue_styles', 10010 );
 
 
 
-
-
-
-
 /*add_filter( 'woocommerce_product_single_add_to_cart_text', 'custom_single_loop_add_to_cart_button', 20, 2 ); 
 function custom_single_loop_add_to_cart_button( $button_text, $product ) {
     // HERE define your specific product IDs in this array
@@ -26,11 +22,6 @@ function custom_single_loop_add_to_cart_button( $button_text, $product ) {
     }
     return $button_text;
 }*/
-
-
-
-
-
 
 
 
@@ -88,14 +79,6 @@ function wps_add_select_checkout_field( $checkout ) {
 	 
 
  }
-
-//* Update the order meta with field value
-/* add_action('woocommerce_checkout_update_order_meta', 'wps_select_checkout_field_update_order_meta');
- function wps_select_checkout_field_update_order_meta( $order_id ) {
-
-   if ($_POST['daypart']) update_post_meta( $order_id, 'daypart', esc_attr($_POST['daypart']));
-
- }*/
 
 //* Display field value on the order edition page
 add_action( 'woocommerce_admin_order_data_after_billing_address', 'wps_select_checkout_field_display_admin_order_meta', 10, 1 );
@@ -965,7 +948,7 @@ function wt_sc_add_heading_before_my_account_coupons(){
     if (current_user_can('society_member_glory')){
         echo "<p>".__( "<div class='rewards-bar-bar'><h3 class='text-color-gold'>Glory Level Benefits</h3>" )."</p>";
     }
-    // My Account Benefits
+    // Grease Benefits
     if (have_rows('my_account_benefits', 'option')) { // Check if the repeater field has rows
         echo "<div class='benefits-section flex-start full align-items'>";
         while (have_rows('my_account_benefits', 'option')) { // Loop through rows
@@ -973,7 +956,7 @@ function wt_sc_add_heading_before_my_account_coupons(){
             $item = get_sub_field('benefit'); // Get sub-field value
             
             // Output the values
-            echo "<div class='square flex-center align-items'><h2 class='text-center' style='margin-bottom: 0;'>";
+            echo "<div class='square flex-center align-items'><p class='full greasy-font text-center text-color-black' style='margin: 0;'>Greese</p><h2 class='text-center' style='margin-bottom: 0;'>";
             echo "<h2 class='text-center' style='margin-bottom: 0;'>" . esc_html($item) . '</h2> ';
             echo '</div>';
         }
@@ -985,8 +968,8 @@ function wt_sc_add_heading_before_my_account_coupons(){
                 $item = get_sub_field('benefit'); // Get sub-field value
                 
                 // Output the values
-                echo "<div class='square flex-center align-items'><h2 class='text-center' style='margin-bottom: 0;'>";
-                echo "<h2 class='text-center' style='margin-bottom: 0;'>" . esc_html($item) . '</h2> ';
+                echo "<div class='square flex-center align-items bg-black grit'><p class='full greasy-font text-center text-color-gold' style='margin: 0;'>Grit</p><h2 class='text-center' style='margin-bottom: 0;'>";
+                echo "<h2 class='text-center text-color-gold' style='margin-bottom: 0;'>" . esc_html($item) . '</h2> ';
                 echo '</div>';
                 }
             }
@@ -999,7 +982,7 @@ function wt_sc_add_heading_before_my_account_coupons(){
                 $item = get_sub_field('benefit'); // Get sub-field value
                 
                 // Output the values
-                echo "<div class='square flex-center align-items'><h2 class='text-center' style='margin-bottom: 0;'>";
+                echo "<div class='square flex-center align-items bg-gold glory'><p class='full greasy-font text-center text-color-black' style='margin: 0;'>Glory</p><h2 class='text-center' style='margin-bottom: 0;'>";
                 echo "<h2 class='text-center' style='margin-bottom: 0;'>" . esc_html($item) . '</h2> ';
                 echo '</div>';
                 }
@@ -1008,7 +991,7 @@ function wt_sc_add_heading_before_my_account_coupons(){
         echo '</div>';
     } else {
         // No rows found
-        echo '<p>No Benefits available. Join The Society</p>';
+        echo '<p>No Benefits available. <a href="/join-the-society" class="text-color-gold" style="text-decoration: underline;">Join The Society</a></p>';
     }
     
    
@@ -1196,19 +1179,47 @@ if (function_exists('acf_add_options_page')) {
         'capability'    => 'edit_posts',
         'redirect'      => false
     ));
-    acf_add_options_sub_page(array(
-        'page_title'    => 'Theme Header Settings',
-        'menu_title'    => 'Header',
-        'parent_slug'   => 'theme-general-settings',
-    ));
-    acf_add_options_sub_page(array(
-        'page_title'    => 'Theme Footer Settings',
-        'menu_title'    => 'Footer',
-        'parent_slug'   => 'theme-general-settings',
-    ));
         acf_add_options_sub_page(array(
         'page_title'    => 'Theme My Account Settings',
         'menu_title'    => 'My Account',
         'parent_slug'   => 'theme-general-settings',
     ));
+}
+
+
+// L E G A C Y   C O D E
+
+//* Update the order meta with field value
+/* add_action('woocommerce_checkout_update_order_meta', 'wps_select_checkout_field_update_order_meta');
+ function wps_select_checkout_field_update_order_meta( $order_id ) {
+
+   if ($_POST['daypart']) update_post_meta( $order_id, 'daypart', esc_attr($_POST['daypart']));
+
+ }*/
+
+
+// ------------ GREASE. GRIT. GLORY. PRODUCTS ------------
+// Add custom field to set product visibility role
+add_action('woocommerce_product_options_general_product_data', 'add_custom_product_field');
+function add_custom_product_field()
+{
+    woocommerce_wp_select(array(
+        'id' => 'visibility_role',
+        'label' => __('Visible to Role', 'woocommerce'),
+        'options' => array(
+            '' => __('Visible to All', 'woocommerce'), // Default option
+            'society_member_grease' => __('Grease Member', 'woocommerce'),
+            'society_member_grit' => __('Grit Member', 'woocommerce'),
+            'society_member_glory' => __('Glory Member', 'woocommerce'),
+        ),
+        'description' => __('Select the role that can view this product. Leave blank for all customers.', 'woocommerce'),
+    ));
+}
+
+// Save the custom field value
+add_action('woocommerce_process_product_meta', 'save_custom_product_field');
+function save_custom_product_field($post_id)
+{
+    $role = sanitize_text_field($_POST['visibility_role']);
+    update_post_meta($post_id, 'visibility_role', $role);
 }

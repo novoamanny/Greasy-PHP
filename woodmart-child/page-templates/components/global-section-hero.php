@@ -23,28 +23,6 @@
     </div>
 </div>
 
-<style>
-    .MODAL{
-        position: fixed;
-        background-color: rgba(0,0,0,0.5);
-        width: 100%;
-        height: 100%;
-        top: 0;
-        z-index: 6;
-        display: none;
-        opacity: 0;
-        transition: ease 0.3s all;
-    }
-    .MODAL .FORM{
-        width: 60%;
-    }
-    .MODAL.SHOW{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        opacity: 1;
-    }
-</style>
 
 <script>
 /* Need to make global style for hero sections! */
